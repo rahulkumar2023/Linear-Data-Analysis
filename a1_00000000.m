@@ -1,7 +1,7 @@
 % Load the edge list into the MATLAB environment
 load("graph_edges.txt");
 % Use the edge list as a parameter so as to start performing tasks on it
-a1_20349877(X21rk74)
+a1_20349877(graph_edges)
 
 function set12 = a1_20349877(elist)
 %
