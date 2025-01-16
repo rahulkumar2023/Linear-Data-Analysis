@@ -1,5 +1,4 @@
 function a4_00000000
-% Function for CISC271, Winter 2022, Assignment #4
 
     % Read the test data from a CSV file
     dmrisk = csvread('dmrisk.csv',1,0);
@@ -20,10 +19,6 @@ function a4_00000000
 
     % Find the LDA vectors and scores for each data set
     [qDM zDM qOB zOB] = a4q1(rDM, yDM, rOB, yOB);
-
-    % %
-    % % STUDENT CODE GOES HERE: PLOT RELEVANT DATA
-    % %
     
     
     % Create a new figure for the plot
@@ -144,10 +139,6 @@ function [q1, z1, q2, z2] = a4q1(Xmat1, yvec1, Xmat2, yvec2)
     % Compute the LDA axis for each data set
     q1 = lda2class(Xmat1(yvec1==1,:), Xmat1(yvec1~=1, :));
     q2 = lda2class(Xmat2(yvec2==1,:), Xmat2(yvec2~=1, :));
-   
-    % %
-    % % STUDENT CODE GOES HERE: COMPUTE SCORES USING LDA AXES
-    % 
    
     % Compute the mean vectors for each dataset
     meanDS1 = mean(Xmat1, 1);
